@@ -1,4 +1,15 @@
-export const portfolioContent = {
+type TechItem = { name: string; desc: string };
+
+export const portfolioContent: {
+  header: { title: string; version: string; status: string };
+  hero: { role: string; tagline: string; description: string; primaryAction: string; secondaryAction: string };
+  about: { header: string; title: string; description: string; stats: { label: string; value: string }[] };
+  projects: { id: string; title: string; category: string; status: string; role?: string; url?: string; description: string; tech: string[]; image: string }[];
+  techStack: { category: string; items: TechItem[] }[];
+  links: { label: string; value: string; type: string }[];
+  contact: { title: string; description: string; primaryAction: string };
+  footer: { copyright: string; metadata: { label: string; value: string }[] };
+} = {
   header: {
     title: 'FULLSTACK_DEVELOPER',
     version: 'V1.0.0',
