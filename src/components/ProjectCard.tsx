@@ -96,7 +96,7 @@ export default function ProjectCard({ project }: { project: Project }) {
               </span>
             ))}
           </div>
-          {project.url && (
+          {project.url ? (
             <a
               href={project.url}
               target="_blank"
@@ -106,6 +106,8 @@ export default function ProjectCard({ project }: { project: Project }) {
             >
               VISIT_SITE →
             </a>
+          ) : (
+            <div className="py-1.5 text-[9px] invisible">PLACEHOLDER</div>
           )}
         </div>
       </div>
