@@ -202,11 +202,16 @@ export default function App() {
                   className="glass-panel sharp-corners p-5 border-white/5"
                 >
                   <p className="blueprint-text !text-primary mb-4">{group.category}</p>
-                  <div className="flex flex-col gap-2">
+                  <div className="flex flex-col gap-3">
                     {group.items.map((item) => (
-                      <span key={item} className="font-mono text-xs text-white/60 hover:text-white transition-colors">
-                        › {item}
-                      </span>
+                      <div key={item.name} className="group/item">
+                        <span className="font-mono text-xs text-white/80 group-hover/item:text-primary transition-colors">
+                          › {item.name}
+                        </span>
+                        <p className="font-mono text-[10px] text-white/30 mt-0.5 leading-relaxed">
+                          {item.desc}
+                        </p>
+                      </div>
                     ))}
                   </div>
                 </motion.div>

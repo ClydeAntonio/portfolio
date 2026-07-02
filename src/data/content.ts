@@ -60,19 +60,48 @@ export const portfolioContent = {
   techStack: [
     {
       category: 'FRONTEND',
-      items: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Radix UI', 'Zustand'],
+      items: [
+        { name: 'Next.js', desc: 'React framework for SSR, SSG, and API routes' },
+        { name: 'React', desc: 'Component-based UI library' },
+        { name: 'TypeScript', desc: 'Typed JavaScript for safer, more scalable code' },
+        { name: 'Tailwind CSS', desc: 'Utility-first CSS for rapid UI building' },
+        { name: 'Framer Motion', desc: 'Animation library for smooth UI transitions' },
+        { name: 'Radix UI', desc: 'Headless, accessible UI component primitives' },
+        { name: 'Zustand', desc: 'Lightweight global state management' },
+      ],
     },
     {
       category: 'BACKEND',
-      items: ['Node.js', 'Express', 'Hono', 'PostgreSQL', 'Prisma', 'Lucia Auth'],
+      items: [
+        { name: 'Node.js', desc: 'JavaScript runtime for server-side applications' },
+        { name: 'Express', desc: 'Minimal HTTP server and routing framework' },
+        { name: 'Hono', desc: 'Ultra-fast edge-ready web framework' },
+        { name: 'PostgreSQL', desc: 'Relational database for structured, persistent data' },
+        { name: 'Prisma', desc: 'Type-safe ORM and database migration toolkit' },
+        { name: 'Lucia Auth', desc: 'Session-based authentication library' },
+      ],
     },
     {
       category: 'INTEGRATIONS',
-      items: ['Stripe', 'Supabase', 'Mapbox', 'Socket.io', 'TanStack Query', 'next-intl'],
+      items: [
+        { name: 'Stripe', desc: 'Payment processing and marketplace payouts via Connect' },
+        { name: 'Supabase', desc: 'Managed Postgres with auth and real-time subscriptions' },
+        { name: 'Mapbox', desc: 'Interactive maps and geolocation services' },
+        { name: 'Socket.io', desc: 'Real-time bidirectional event communication' },
+        { name: 'TanStack Query', desc: 'Server state, caching, and data synchronization' },
+        { name: 'next-intl', desc: 'Internationalization and translations for Next.js' },
+      ],
     },
     {
       category: 'DEVOPS',
-      items: ['Docker', 'Bun', 'Vitest', 'Playwright', 'Sentry', 'CI/CD'],
+      items: [
+        { name: 'Docker', desc: 'Containerization for consistent dev and prod environments' },
+        { name: 'Bun', desc: 'Fast all-in-one JS runtime and package manager' },
+        { name: 'Vitest', desc: 'Fast unit and integration testing framework' },
+        { name: 'Playwright', desc: 'End-to-end browser automation and testing' },
+        { name: 'Sentry', desc: 'Error monitoring and performance tracking' },
+        { name: 'CI/CD', desc: 'Automated build, test, and deployment pipelines' },
+      ],
     },
   ],
   links: [
