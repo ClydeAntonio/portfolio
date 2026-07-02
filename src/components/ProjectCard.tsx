@@ -85,26 +85,28 @@ export default function ProjectCard({ project }: { project: Project }) {
           <p className="text-sm text-gray-400 leading-relaxed">{project.description}</p>
         </div>
 
-        <div className="flex flex-wrap gap-2 pt-4">
+        <div className="space-y-3 pt-4">
+          <div className="flex flex-wrap gap-2">
+            {project.tech.map((t) => (
+              <span
+                key={t}
+                className="px-2 py-0.5 bg-white/5 border border-white/10 font-mono text-[9px] text-white/40 group-hover:border-primary/40 group-hover:text-primary/60 transition-colors"
+              >
+                {t}
+              </span>
+            ))}
+          </div>
           {project.url && (
             <a
               href={project.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full mb-1 px-3 py-1.5 border border-primary/40 text-primary font-heading text-[9px] tracking-widest sharp-corners hover:bg-primary hover:text-bg transition-all text-center"
+              className="block w-full px-3 py-1.5 border border-primary/40 text-primary font-heading text-[9px] tracking-widest sharp-corners hover:bg-primary hover:text-bg transition-all text-center"
               onClick={(e: React.MouseEvent) => e.stopPropagation()}
             >
               VISIT_SITE →
             </a>
           )}
-          {project.tech.map((t) => (
-            <span
-              key={t}
-              className="px-2 py-0.5 bg-white/5 border border-white/10 font-mono text-[9px] text-white/40 group-hover:border-primary/40 group-hover:text-primary/60 transition-colors"
-            >
-              {t}
-            </span>
-          ))}
         </div>
       </div>
 
