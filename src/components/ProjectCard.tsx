@@ -47,15 +47,7 @@ export default function ProjectCard({ project }: { project: Project }) {
         style={{ transform: 'translateZ(20px)' }}
       >
         <span className="blueprint-text !text-primary">{project.id}</span>
-        <div className="flex items-center gap-3">
-          {project.status === 'IN_DEVELOPMENT' && (
-            <span className="flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
-              <span className="blueprint-text !text-amber-400/80 !text-[8px]">IN_DEV</span>
-            </span>
-          )}
-          <span className="blueprint-text !text-white/30">{project.category}</span>
-        </div>
+        <span className="blueprint-text !text-white/30">{project.category}</span>
       </div>
 
       <div
@@ -68,6 +60,12 @@ export default function ProjectCard({ project }: { project: Project }) {
           className="max-h-full max-w-full object-contain transition-all duration-500 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-bg/40 to-transparent pointer-events-none" />
+        {project.status === 'IN_DEVELOPMENT' && (
+          <div className="absolute top-3 right-3 flex items-center gap-1.5 bg-amber-400/10 border border-amber-400/60 px-2.5 py-1 backdrop-blur-sm">
+            <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
+            <span className="font-mono text-[10px] font-bold text-amber-400 tracking-widest">IN DEVELOPMENT</span>
+          </div>
+        )}
       </div>
 
       <div
@@ -79,7 +77,10 @@ export default function ProjectCard({ project }: { project: Project }) {
             {project.title}
           </h3>
           {project.role && (
-            <p className="blueprint-text !text-primary/60 !text-[9px] mb-2">{project.role}</p>
+            <span className="inline-flex items-center gap-1.5 px-2 py-0.5 border border-primary/50 bg-primary/10 mb-2">
+              <span className="w-1 h-1 rounded-full bg-primary" />
+              <span className="font-mono text-[9px] font-bold text-primary tracking-widest">{project.role}</span>
+            </span>
           )}
           <p className="text-sm text-gray-400 leading-relaxed">{project.description}</p>
         </div>
